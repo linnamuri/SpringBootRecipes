@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Veggie Platter</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+          <img src="images/healthy-food.png" width="150px" height="100px" style="padding-left: 20px"> </img>
+          <h2 style="margin-left: -600px">Veggie Platter </h2>
+          <ul>
+
+              <li><a href="recipes.html">Recipes   </a></li>
+              <li><a href="dailyvalues.html">Daily Values</a></li> 
+              <li><a href="nutrition.html">Nutrition Info  </a> </li>
+              <li><a href="javascript:logout()">Logout</a> </li>
+          </ul>
+      </nav>
+
+    </header>
+    <div class="container">
+      <h2>Nutrition Information</h2><br/>
+
+      <input type="text" id="item_name" size ="35" value="orange" class="text-input">
+      <button type="button" onclick="showNutritionInfo()" class="btn">Show Nutrition Info</button>
+
+      <br/><br/>
+      <table style="border:1px">
+        <tr><td>Item Name</td><td id="food_name">....</td></tr>
+        <tr><td>Serving Unit</td><td id="serving_unit">....</td></tr>
+        <tr><td>Serving Weight</td><td id="serving_weight">....</td></tr>
+        <tr><td>Calories</td><td id="calories">....</td></tr>
+        <tr><td>Total Fat</td><td id="total_fat">....</td></tr>
+        <tr><td>Total Carbohydrates (incl. Sugar)</td><td id="total_carbs">....</td></tr>
+        <tr><td>Sugars</td><td id="sugars">....</td></tr>
+        <tr><td>Protein</td><td id="protein">....</td></tr>
+        <tr><td>Sodium</td><td id="sodium">....</td></tr>
+        <tr><td>Potassium</td><td id="potassium">....</td></tr>
+      </table>
+    </div>
+<script>
+
+window.onload=showNutritionInfo()
+
+//This function is to call nutritionix API when 'Show Nutrition Info' button is clicked
+function showNutritionInfo() { 
+      let item_name=document.getElementById("item_name").value;
+      var raw = JSON.stringify({
+        "query": item_name
+      });
+
+      var myHeaders = new Headers();
+      myHeaders.append("x-app-id", "f7893874");
+      myHeaders.append("x-app-key", "cd14a5989775710f89ce83fb0fefa99a");
+      myHeaders.append("Content-Type", "application/json");
+
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("https://trackapi.nutritionix.com/v2/natural/nutrients", requestOptions)
+        .then(response => response.text())
+        .then(result => populateData(result))
+        .catch(error => console.log('error', error));
+
+}
+
+//This function is to populate data as a table using response from nutritionix API
+function populateData(responseText)
+{
+    
+    const jsonResponse = JSON.parse(responseText);
+    document.getElementById("food_name").innerHTML=jsonResponse.foods[0].food_name;
+    document.getElementById("serving_unit").innerHTML=jsonResponse.foods[0].serving_unit;
+    document.getElementById("serving_weight").innerHTML=jsonResponse.foods[0].serving_weight_grams + " grams";
+    document.getElementById("calories").innerHTML=jsonResponse.foods[0].nf_calories;
+    document.getElementById("total_fat").innerHTML=jsonResponse.foods[0].nf_total_fat + " grams";
+    document.getElementById("total_carbs").innerHTML=jsonResponse.foods[0].nf_total_carbohydrate + " grams";
+    document.getElementById("sugars").innerHTML=jsonResponse.foods[0].nf_sugars + " grams";
+    document.getElementById("protein").innerHTML=jsonResponse.foods[0].nf_protein + " grams";
+    document.getElementById("sodium").innerHTML=jsonResponse.foods[0].nf_sodium + " milligrams";
+    document.getElementById("potassium").innerHTML=jsonResponse.foods[0].nf_potassium + " milligrams";
+}
+
+//Test Comment
+</script>
+
+
+
+</body>
+</html>
+
