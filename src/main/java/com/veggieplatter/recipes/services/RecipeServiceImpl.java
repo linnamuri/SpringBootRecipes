@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -43,4 +42,11 @@ public class RecipeServiceImpl implements RecipeService{
         List<Recipe> recipeList = recipeRepository.findAll();
         return recipeList.stream().map(recipe -> new RecipeDto(recipe)).collect(Collectors.toList());
     }
+    @Override
+    @Transactional
+    public void deleteRecipeById(Long Id){
+        recipeRepository.deleteById(Id);
+        System.out.println("control is here");
+    }
+
 }

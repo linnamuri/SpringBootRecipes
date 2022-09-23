@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api/recipes")
 public class RecipeController {
     @Autowired
     RecipeService recipeService;
 
-    @GetMapping("/getallrecipes")
+    @GetMapping("/all")
     public List<RecipeDto> getAllRecipes(){
         return recipeService.getAllRecipes();
     }
 
-    @PostMapping("/createrecipe/{userId}")
+    @PostMapping("/create/{userId}")
     public List<RecipeDto> createRecipe(@RequestBody RecipeDto recipeDto,@PathVariable Long userId){
         return recipeService.addRecipe(recipeDto,userId);
         //return recipeService.getAllRecipes();
@@ -38,5 +38,13 @@ public class RecipeController {
     }
 
 */
+    @DeleteMapping("/delete/{id}")
+    public List<RecipeDto> deleteRecipe(@PathVariable Long id){
+        recipeService.deleteRecipeById(id);
+        return recipeService.getAllRecipes();
+
+    }
+
+
 
 }

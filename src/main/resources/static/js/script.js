@@ -5,9 +5,9 @@ const form = document.querySelector('form')
 
 //End Points for Get, Create and Delete Recipes
 //Spring Boot: changed port from 4000 to 8080
-const getrecipeURL =`http://localhost:8080/api/getallrecipes`
-const postrecipeURL =`http://localhost:8080/api/createrecipe`
-const deleterecipeURL =`http://localhost:4000/api/deleterecipe`
+const getrecipeURL =`http://localhost:8080/api/recipes/all`
+const postrecipeURL =`http://localhost:8080/api/recipes/create`
+const deleterecipeURL =`http://localhost:8080/api/recipes/delete`
 
 //Callback method after receiving response from server
 const recipesCallback = ({ data: recipes }) => displayRecipes(recipes)

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd49f4f6-7d61-4592-ae71-9a11c2f4995e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/RecipesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/RecipesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/controller/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/repositories/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/repositories/RecipeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/RecipesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/RecipesApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/RecipeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/RecipeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/RecipeDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/RecipeDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/register.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2F8DdTPN68oLwDOmBhZlCfE3GMG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sravan/bp-foundations/SpringBootRecipes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="RecipesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.veggieplatter.recipes.RecipesApplication" />
+      <module name="recipes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.veggieplatter.recipes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RecipesApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd49f4f6-7d61-4592-ae71-9a11c2f4995e" name="Changes" comment="" />
+      <created>1663864905823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663864905823</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

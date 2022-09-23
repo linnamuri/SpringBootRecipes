@@ -1,0 +1,16 @@
+com/veggieplatter/recipes/controller/UserController.class
+com/veggieplatter/recipes/dtos/RecipeDto.class
+com/veggieplatter/recipes/services/RecipeServiceImpl.class
+com/veggieplatter/recipes/services/RecipeService.class
+com/veggieplatter/recipes/entites/User.class
+com/veggieplatter/recipes/repositories/UserRepository.class
+com/veggieplatter/recipes/services/UserServiceImpl.class
+com/veggieplatter/recipes/controller/FavoritesController.class
+com/veggieplatter/recipes/entites/Recipe.class
+com/veggieplatter/recipes/dtos/FavoritesDto.class
+com/veggieplatter/recipes/services/UserService.class
+com/veggieplatter/recipes/configuration/Config.class
+com/veggieplatter/recipes/repositories/RecipeRepository.class
+com/veggieplatter/recipes/RecipesApplication.class
+com/veggieplatter/recipes/controller/RecipeController.class
+com/veggieplatter/recipes/dtos/UserDto.class

@@ -1,0 +1,16 @@
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/entites/Recipe.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/RecipesApplication.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/services/UserServiceImpl.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/configuration/Config.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/controller/RecipeController.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/repositories/UserRepository.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/services/RecipeService.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/controller/UserController.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/services/UserService.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/services/RecipeServiceImpl.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/dtos/UserDto.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/controller/FavoritesController.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/entites/User.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/dtos/RecipeDto.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/repositories/RecipeRepository.java
+/Users/sravan/bp-foundations/SpringBootRecipes/src/main/java/com/veggieplatter/recipes/dtos/FavoritesDto.java
