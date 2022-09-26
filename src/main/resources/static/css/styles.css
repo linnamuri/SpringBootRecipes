@@ -1,0 +1,192 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;    
+}
+
+body{
+    width : 100%;
+    height: 100vh;
+    padding:0 ;
+    background: #FFF7ED;
+}
+
+nav
+{
+     width:100%;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 0 ;
+    background-color: #f9ead9;
+    font-family: 'Caveat';
+    font-size: xx-large;
+}
+
+nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin:10px 30px;
+    
+ } 
+
+
+
+
+  nav ul li a,h2{
+    text-decoration:none;
+    color:#92817A;
+    font-family: 'Caveat',cursive;
+    
+}
+
+td{
+    text-decoration:none;
+    color:#92817A;
+    font-family: fantasy;
+    font-size: medium;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+th{
+    text-decoration:none;
+    color:#92817A;
+    font-family: fantasy;
+    
+    font-weight: 400;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.container {
+    font-family: arial;
+    font-size: 24px;
+    margin: 125px;
+    margin-top: 50px;
+    height: 200px;
+  }
+
+p{
+    font-family: fantasy;
+}
+
+.btn {
+    font-family: fantasy;
+    color: #ffffff;
+    font-size: 20px;
+    background: #92817A;
+    padding: 11px 20px 5px 10px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #c7a27a;
+    text-decoration: none;
+  }
+
+  .text-input {
+    padding: 12px;
+    font-size: 21px;
+    border-width: 1px;
+    border-color: #784710;
+    background-color: #ffffff;
+    color: #784710;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px rgba(120,71,16,.34);
+    
+}
+.text-input:focus {
+    outline:none;
+}
+
+.text-area {
+  padding: 12px;
+  font-size: 21px;
+  border-width: 1px;
+  border-color: #784710;
+  background-color: #ffffff;
+  color: #784710;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(120,71,16,.34);
+  height: 300px;
+  width: 100%;
+  
+}
+
+
+
+
+
+
+
+/*Dummy Styles*/
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    float: left;
+    
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #fff7ed;
+    color: #fff7ed;
+    
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: left;
+    font-size: medium;
+    padding: 10px;
+  }
+
+  .recipes-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
