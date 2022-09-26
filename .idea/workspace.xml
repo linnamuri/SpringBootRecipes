@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd49f4f6-7d61-4592-ae71-9a11c2f4995e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/RecipesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/RecipesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/controller/RecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/repositories/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/repositories/RecipeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/RecipeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veggieplatter/recipes/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/RecipesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/RecipesApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/RecipeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/RecipeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/RecipeDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/RecipeDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/dtos/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/Recipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/entites/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/RecipeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/veggieplatter/recipes/services/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +35,24 @@
     </option>
   </component>
   <component name="ProjectId" id="2F8DdTPN68oLwDOmBhZlCfE3GMG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sravan/bp-foundations/SpringBootRecipes&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/sravan/bp-foundations/SpringBootRecipes",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="RecipesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.veggieplatter.recipes.RecipesApplication" />
@@ -112,5 +94,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
