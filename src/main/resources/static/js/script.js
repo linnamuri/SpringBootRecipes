@@ -8,6 +8,9 @@ const form = document.querySelector('form')
 const getrecipeURL =`http://localhost:8080/api/recipes/all`
 const postrecipeURL =`http://localhost:8080/api/recipes/create`
 const deleterecipeURL =`http://localhost:8080/api/recipes/delete`
+const allfavoritesURL = `http://localhost:8080/api/favorites`
+const favoriterecipeURL = `http://localhost:8080/api/favorites/like`
+
 
 //Callback method after receiving response from server
 const recipesCallback = ({ data: recipes }) => displayRecipes(recipes)
@@ -23,6 +26,22 @@ const createRecipe = (body,id) => axios.post(`${postrecipeURL}/${id}`, body).the
 
 //Axios DELETE call to delete recipe
 const deleteRecipe = id => axios.delete(`${deleterecipeURL}/${id}`).then(recipesCallback).catch(errCallback)
+
+//Axios call to GET logged in user Favorites
+const getAllFavorites = userId => axios.get(`${allfavoritesURL}/${userId}`).then(recipesCallback).catch(errCallback)
+
+//Axios POST call to favorite recipe
+const favoriteRecipe = (body) => axios.post(`${favoriterecipeURL}`, body).then().catch(errCallback)
+
+function favorite(recipe_id)
+{
+    let favoriteBodyObj = {
+            userId: userId,
+            recipeId: recipe_id
+        }
+    favoriteRecipe(favoriteBodyObj);
+}
+
 
 //This method is called when the Submit button is clicked for Create Recipe form. This function constructs the POST object and calls createRecipe method.
 function submitHandler(e) {
@@ -70,9 +89,12 @@ function createRecipeCard(recipe) {
                                      ${recipe.recipeDescription}</p>`
 
    let cardDelete = "";
-   if(userId === `${recipe.userId}`)
+   if(userId === `${recipe.userId}` && window.location.href.indexOf("favorites")==-1)
    {
-     cardDelete=`<button type="button"  class="btn" id="deleteRecipeBtn" onclick=deleteRecipe(${recipe.id})>Delete Recipe</button>`
+     cardDelete=`<button type="button"  class="btn" id="deleteRecipeBtn" onclick=deleteRecipe(${recipe.id})>Delete Recipe</button>
+
+     <button type="button"  class="btn" id="favoriteRecipeBtn" onclick=favorite(${recipe.id})>Favorite Recipe</button>
+     `
    }
     let cardEnd=`</div></div></div>`
 
@@ -95,9 +117,8 @@ function showRecipeForm()
     document.getElementById("recipe-form").style.display="block"
     document.getElementById("createRecipe_createdBy").value=userId;
 }
-document.getElementById("recipe-form").style.display="none"
 
-form.addEventListener('submit', submitHandler)
+
 
 //Search for "easy way to get cookie by name" and got this sample code from Stack Overflow
 const getCookieValue = (name) => (

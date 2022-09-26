@@ -35,6 +35,7 @@ public class RecipeServiceImpl implements RecipeService{
     @Override
     @Transactional
     public List<RecipeDto> addRecipe(RecipeDto recipeDto, Long userId) {
+        recipeDto.setUserId(userId);
         Optional<User> userOptional = userRepository.findById(userId);
         Recipe recipeNew = new Recipe(recipeDto);
         userOptional.ifPresent(recipeNew::setUser);

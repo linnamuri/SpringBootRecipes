@@ -25,26 +25,10 @@ public class RecipeController {
         return recipeService.addRecipe(recipeDto,userId);
         //return recipeService.getAllRecipes();
     }
-
-/*
-    @GetMapping("/recipe/{id}")
-    public String testMethod(@PathVariable String id){
-        return "Recipe with Id: "+id;
-    }
-
-    @GetMapping ("/recipe")
-    public String testMethod2(@RequestParam String recipeName){
-        return "Your query param is:" + recipeName;
-    }
-
-*/
     @DeleteMapping("/delete/{id}")
     public List<RecipeDto> deleteRecipe(@PathVariable Long id){
         recipeService.deleteRecipeById(id);
         return recipeService.getAllRecipes();
 
     }
-
-
-
 }

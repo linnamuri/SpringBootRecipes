@@ -32,19 +32,7 @@
         
         <div class="recipes-container">
             <br/>
-            <button type="button"  class="btn" id="addRecipeBtn" onClick="showRecipeForm()">Post New Recipe</button>
-            <p id="message"></p>
-            <br/><br/><br/>
-            <div id = "recipe-form">
-              <form>
-                  <input type='text' id="createRecipe_name" placeholder="Recipe Name" class="text-input"/>
-                  <input type='text' id="createRecipe_ingredients" placeholder='Ingredients' class="text-input"/>
-                  <input type='text' id="createRecipe_imgUrl" placeholder='Paste Image URL' class="text-input"/><br/><br/>
-                  <textarea id="createrecipe_instructions" placeholder='Type in the step by step instructions here...(Maximum 1000 characters)' class="text-area" maxlength="1000"></textarea><br/><br/>
-                  <input type='hidden' id="createRecipe_createdBy" value=""/>
-                  <button class="btn">Submit</button> <br/><br/><br/><br/>
-              </form>
-            </div>
+
      
             <!--Recipe Cards-->
             <section id="recipesContainer">
@@ -55,10 +43,9 @@
       <script src="js/script.js"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script type="text/javascript">
-        document.getElementById("recipe-form").style.display="none";
-        form.addEventListener('submit', submitHandler);
-        window.onload=getAllRecipes();
-      </script>
+      //const getCookieDetails = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '')
+      //const userIdCookieValue =  getCookieDetails("userId");
+      window.onload=getAllFavorites(getCookieValue("userId"))</script>
 
     </body>
 </html>

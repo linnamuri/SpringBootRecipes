@@ -28,12 +28,20 @@ public class Recipe {
     @Column
     private String recipeDescription;
 
+
     @Column(name = "user_id", insertable = false, updatable = false)
     private Long userId;
 
+
+    //A User has Recipes. In this case User is the ONE side and Recipes is the MANY side.
+    //There will be a column UserId in the table recipes.
     @ManyToOne
     @JsonBackReference
     private User user;
+
+   /* @ManyToOne
+    @JsonBackReference
+    private Favorites favorites;*/
 
     public Recipe(RecipeDto recipeDto) {
         if (recipeDto.getRecipeName() != null){

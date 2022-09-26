@@ -34,16 +34,18 @@ public class UserServiceImpl implements UserService {
     public List<String> userLogin(UserDto userDto){
         List<String> response = new ArrayList<>();
         Optional<User> userOptional = userRepository.findByUsername(userDto.getUsername());
-        if (userOptional.isPresent()){
-            if (passwordEncoder.matches(userDto.getPassword(), userOptional.get().getPassword())){
+        if (userOptional.isPresent())
+        {
+            if (passwordEncoder.matches(userDto.getPassword(), userOptional.get().getPassword()))
+            {
                 response.add("http://localhost:8080/recipes.html");
                 response.add(String.valueOf(userOptional.get().getId()));
-            } else {
-                response.add("Username or password incorrect");
-            }
-        } else {
-            response.add("Username or password incorrect");
+                response.add(String.valueOf(userOptional.get().getUsername()));
+            } else
+                response.add("password incorrect");
         }
+        else
+            response.add("Username or password incorrect");
         return response;
     }
 }
