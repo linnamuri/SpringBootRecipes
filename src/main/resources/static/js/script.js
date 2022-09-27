@@ -2,6 +2,8 @@
 const recipesContainer = document.getElementById('recipesContainer')
 const form = document.querySelector('form')
 
+var favoriteIds=new Array;
+
 
 //End Points for Get, Create and Delete Recipes
 //Spring Boot: changed port from 4000 to 8080
@@ -14,6 +16,8 @@ const favoriterecipeURL = `http://localhost:8080/api/favorites/like`
 
 //Callback method after receiving response from server
 const recipesCallback = ({ data: recipes }) => displayRecipes(recipes)
+
+const recipesCallbackForIds = ({ data: recipes }) => buildFavoritesList(recipes)
 
 //Axios GET call to get all recipes
 const getAllRecipes = () => axios.get(getrecipeURL).then(recipesCallback).catch(errCallback)
@@ -29,6 +33,8 @@ const deleteRecipe = id => axios.delete(`${deleterecipeURL}/${id}`).then(recipes
 
 //Axios call to GET logged in user Favorites
 const getAllFavorites = userId => axios.get(`${allfavoritesURL}/${userId}`).then(recipesCallback).catch(errCallback)
+
+const getAllFavoriteIds = userId => axios.get(`${allfavoritesURL}/${userId}`).then(recipesCallbackForIds).catch(errCallback)
 
 //Axios POST call to favorite recipe
 const favoriteRecipe = (body) => axios.post(`${favoriterecipeURL}`, body).then().catch(errCallback)
@@ -76,6 +82,8 @@ function submitHandler(e) {
 //This function is to create recipe cards and iterates through response JSON array received from server
 function createRecipeCard(recipe) {
     const recipeCard = document.createElement('div')
+
+
     recipeCard.classList.add('flip-card')
 
     let cardStart=`<div class="flip-card-inner">
@@ -91,11 +99,17 @@ function createRecipeCard(recipe) {
    let cardDelete = "";
    if(userId === `${recipe.userId}` && window.location.href.indexOf("favorites")==-1)
    {
-     cardDelete=`<button type="button"  class="btn" id="deleteRecipeBtn" onclick=deleteRecipe(${recipe.id})>Delete Recipe</button>
-
-     <button type="button"  class="btn" id="favoriteRecipeBtn" onclick=favorite(${recipe.id})>Favorite Recipe</button>
-     `
-   }
+     cardDelete=`<button type="button"  class="btn" id="deleteRecipeBtn" onclick=deleteRecipe(${recipe.id})>Delete Recipe</button>&nbsp;&nbsp;`
+    }
+   if(window.location.href.indexOf("favorites")===-1)
+   {
+        if(favoriteIds.indexOf(recipe.id)!= -1){
+            cardDelete= cardDelete+`<br/><p>Your Favorite</p>`
+        }
+        else{
+            cardDelete= cardDelete+`<button type="button"  class="btn" id="favoriteRecipeBtn" onclick=favorite(${recipe.id})>Favorite Recipe</button>&nbsp;&nbsp;`
+        }
+    }
     let cardEnd=`</div></div></div>`
 
     recipeCard.innerHTML =  cardStart+cardDelete+cardEnd;
@@ -109,6 +123,16 @@ function displayRecipes(arr) {
     for (let i = 0; i < arr.length; i++) {
         createRecipeCard(arr[i])
     }
+}
+
+function buildFavoritesList(recipesList){
+//console.log("I am supposed to be #2")
+for (let i = 0; i < recipesList.length; i++) {
+    favoriteIds.push(recipesList[i].id)
+    }
+    //console.log("favoriteIds -- "+favoriteIds);
+
+    getAllRecipes();
 }
 
 //This method is to show Create Recipe form

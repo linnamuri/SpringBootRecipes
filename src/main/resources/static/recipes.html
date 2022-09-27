@@ -22,7 +22,7 @@
                     <!--<li><a href ="index.html">Home </a></li>-->
                     <li><a href="recipes.html">All Recipes</a></li>
                     <li><a href="favorites.html">Favorites</a></li>
-                    <li><a href="dailyvalues.html">Daily Values</a></li>
+                    <!--<li><a href="dailyvalues.html">Daily Values</a></li>-->
                     <li><a href="nutrition.html">Nutrition Info  </a> </li>
                     <li><a href="javascript:logout()">Logout</a> </li>
                 </ul>
@@ -57,7 +57,9 @@
       <script type="text/javascript">
         document.getElementById("recipe-form").style.display="none";
         form.addEventListener('submit', submitHandler);
-        window.onload=getAllRecipes();
+        window.onload=getAllFavoriteIds(userId);
+
+
       </script>
 
     </body>

@@ -19,7 +19,7 @@
 
               <li><a href="recipes.html">All Recipes</a></li>
               <li><a href="favorites.html">Favorites</a></li>
-              <li><a href="dailyvalues.html">Daily Values</a></li>
+              <!--<li><a href="dailyvalues.html">Daily Values</a></li>-->
               <li><a href="nutrition.html">Nutrition Info  </a> </li>
               <li><a href="javascript:logout()">Logout</a> </li>
           </ul>
@@ -93,7 +93,12 @@ function populateData(responseText)
     document.getElementById("sodium").innerHTML=jsonResponse.foods[0].nf_sodium + " milligrams";
     document.getElementById("potassium").innerHTML=jsonResponse.foods[0].nf_potassium + " milligrams";
 }
+function logout()
+{
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location="http://localhost:8080"
 
+}
 //Test Comment
 </script>
 
