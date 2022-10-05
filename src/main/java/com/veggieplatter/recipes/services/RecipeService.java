@@ -14,6 +14,9 @@ public interface RecipeService {
     List<RecipeDto> addRecipe(RecipeDto recipeDto, Long userId);
 
     @Transactional
+    void updateRecipeById(RecipeDto recipeDto);
+
+    @Transactional
     public void deleteRecipeById(Long Id);
 
 }

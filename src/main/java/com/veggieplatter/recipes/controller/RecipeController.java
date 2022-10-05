@@ -31,4 +31,19 @@ public class RecipeController {
         return recipeService.getAllRecipes();
 
     }
+    @PutMapping("/edit")
+    public void updateRecipe(@RequestBody RecipeDto recipeDto ){
+        recipeService.updateRecipeById(recipeDto);
+    }
+
 }
+
+
+
+
+
+
+
+
+
+

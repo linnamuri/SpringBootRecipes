@@ -12,6 +12,7 @@ const postrecipeURL =`http://localhost:8080/api/recipes/create`
 const deleterecipeURL =`http://localhost:8080/api/recipes/delete`
 const allfavoritesURL = `http://localhost:8080/api/favorites`
 const favoriterecipeURL = `http://localhost:8080/api/favorites/like`
+const editrecipeURL =`http://localhost:8080/api/recipes/edit`
 
 
 //Callback method after receiving response from server
@@ -38,6 +39,8 @@ const getAllFavoriteIds = userId => axios.get(`${allfavoritesURL}/${userId}`).th
 
 //Axios POST call to favorite recipe
 const favoriteRecipe = (body) => axios.post(`${favoriterecipeURL}`, body).then().catch(errCallback)
+
+const editRecipe = (body) => axios.put(`${editrecipeURL}`, body).then(getAllRecipes).catch(errCallback)
 
 function favorite(recipe_id)
 {
@@ -91,16 +94,30 @@ function createRecipeCard(recipe) {
                                    <img src=${recipe.recipeImageURL} width="500px" height="500px">
                                  </div>
                                  <div class="flip-card-back">
-                                   <br/><p class="card-text">Recipe Name: ${recipe.recipeName}</p><br/>
-                                   <p class="card-text">Ingredients: <br/> ${recipe.recipeIngredients}</p><br/>
+                                   <br/><p class="card-text" id="recipeNameText_${recipe.id}">Recipe Name: ${recipe.recipeName}</p>
+                                   <input type="text" id="recipeNameTextBox_${recipe.id}" style="display:none" value='${recipe.recipeName}' class="text-input" size="40"></input>
+                                   `
+
+    let cardContinue = "";
+    if(userId === `${recipe.userId}` && window.location.href.indexOf("favorites")==-1)
+    {
+
+       cardContinue=`
+       <button type="button"  class="btn" id="submitNewRecipeBtn_${recipe.id}" onclick="submitNewRecipeBtn(${recipe.id})" style="display:none">Submit</button>&nbsp;&nbsp;
+       <button type="button"  class="btn" id="editRecipeBtn_${recipe.id}" onclick="editRecipeName(${recipe.id},'${recipe.recipeName}')">Edit Recipe Name</button>&nbsp;&nbsp;`
+    }
+
+
+
+     cardContinue= cardContinue + `<p class="card-text">Ingredients: <br/> ${recipe.recipeIngredients}</p><br/>
                                    <p class="card-text">Instructions: <br/>
-                                     ${recipe.recipeDescription}</p>`
+                                     ${recipe.recipeDescription}</p><br/>`
 
    let cardDelete = "";
    if(userId === `${recipe.userId}` && window.location.href.indexOf("favorites")==-1)
    {
      cardDelete=`<button type="button"  class="btn" id="deleteRecipeBtn" onclick=deleteRecipe(${recipe.id})>Delete Recipe</button>&nbsp;&nbsp;`
-    }
+   }
    if(window.location.href.indexOf("favorites")===-1)
    {
         if(favoriteIds.indexOf(recipe.id)!= -1){
@@ -112,7 +129,7 @@ function createRecipeCard(recipe) {
     }
     let cardEnd=`</div></div></div>`
 
-    recipeCard.innerHTML =  cardStart+cardDelete+cardEnd;
+    recipeCard.innerHTML =  cardStart+cardContinue+cardDelete+cardEnd;
 
     recipesContainer.appendChild(recipeCard)
 }
@@ -156,4 +173,25 @@ function logout()
     document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
     window.location="http://localhost:8080"
 
+}
+
+function editRecipeName(recipeId, recipeName)
+{
+    document.getElementById("recipeNameText_"+recipeId).style.display="none";
+    document.getElementById("editRecipeBtn_"+recipeId).style.display="none";
+    document.getElementById("recipeNameTextBox_"+recipeId).style.display="block";
+    document.getElementById("submitNewRecipeBtn_"+recipeId).style.display="block";
+
+
+ console.log("Recipe Id: " + recipeId + "::: Recipe Name: " + recipeName);
+}
+
+function submitNewRecipeBtn(recipeId)
+{
+    let bodyObj = {
+            id: recipeId,
+            recipeName: document.getElementById("recipeNameTextBox_"+recipeId).value
+    }
+    editRecipe(bodyObj);
+    //console.log("submitNewRecipeBtn - Recipe Id: " + recipeId );
 }

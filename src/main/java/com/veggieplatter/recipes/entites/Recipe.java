@@ -19,13 +19,17 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column
     private String recipeName;
-    @Column
+
+    @Column(length = 2000)
     private String recipeIngredients;
-    @Column
+
+    @Column(length = 512)
     private String recipeImageURL;
-    @Column
+
+    @Column(length = 2000)
     private String recipeDescription;
 
 

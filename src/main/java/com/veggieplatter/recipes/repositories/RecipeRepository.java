@@ -15,6 +15,7 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     @Transactional
     void findAllByUserId(Long id);
 
+
     /*@Transactional
     List<Recipe> findAllByNameIn(List<Long> id);*/
 }

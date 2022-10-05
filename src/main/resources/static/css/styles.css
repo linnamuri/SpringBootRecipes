@@ -19,8 +19,8 @@ nav
     justify-content:space-between;
     padding:20px 0 ;
     background-color: #f9ead9;
-    font-family: 'Caveat';
-    font-size: xx-large;
+    font-family: fantasy;
+    font-size: x-large;
 }
 
 nav ul li{
@@ -36,7 +36,7 @@ nav ul li{
   nav ul li a,h2{
     text-decoration:none;
     color:#92817A;
-    font-family: 'Caveat',cursive;
+    font-family: fantasy;
     
 }
 
