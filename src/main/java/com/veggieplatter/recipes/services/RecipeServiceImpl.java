@@ -61,4 +61,13 @@ public class RecipeServiceImpl implements RecipeService{
         });
     }
 
+//    @Override
+//    public Optional<RecipeDto> getRecipeById(Long recipeId) {
+//        Optional<Recipe> recipeOptional = recipeRepository.findById(recipeId);
+//        if (recipeOptional.isPresent()){
+//            return Optional.of(new recipeDto(recipeOptional.get()));
+//        }
+//        return Optional.empty();
+// }
+
 }

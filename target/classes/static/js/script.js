@@ -8,6 +8,7 @@ var favoriteIds=new Array;
 //End Points for Get, Create and Delete Recipes
 //Spring Boot: changed port from 4000 to 8080
 const getrecipeURL =`http://localhost:8080/api/recipes/all`
+//const getrecipebyidURL =`http://localhost:8080/api/recipes/byuser`
 const postrecipeURL =`http://localhost:8080/api/recipes/create`
 const deleterecipeURL =`http://localhost:8080/api/recipes/delete`
 const allfavoritesURL = `http://localhost:8080/api/favorites`
@@ -21,6 +22,9 @@ const recipesCallback = ({ data: recipes }) => displayRecipes(recipes)
 const recipesCallbackForIds = ({ data: recipes }) => buildFavoritesList(recipes)
 
 //Axios GET call to get all recipes
+//const getAllRecipes = () => axios.get(getrecipebyidURL).then(recipesCallback).catch(errCallback)
+
+//Axios GET call to get recipes by user id
 const getAllRecipes = () => axios.get(getrecipeURL).then(recipesCallback).catch(errCallback)
 
 //Error Callback Method. This is called if the server is returning an error.
@@ -167,7 +171,7 @@ const getCookieValue = (name) => (
 )
 
 const userId= getCookieValue("userId");
-
+// log out will delete cookies and redirect the user to login page.
 function logout()
 {
     document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
@@ -194,4 +198,5 @@ function submitNewRecipeBtn(recipeId)
     }
     editRecipe(bodyObj);
     //console.log("submitNewRecipeBtn - Recipe Id: " + recipeId );
+    //window.location.href
 }
